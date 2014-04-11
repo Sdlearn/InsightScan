@@ -643,7 +643,7 @@ def parseIPlist(filename):
 			iplist.append(ipaddr)
 		except:
 			if not validateCIDRBlock(ipaddr):
-				print 'IP address not valid at line '+cnt
+				print 'IP address not valid at line '+str(cnt)
 				sys.exit()
 			else:
 				iplist=iplist+listCIDR(ipaddr)
